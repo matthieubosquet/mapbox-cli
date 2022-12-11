@@ -15,8 +15,14 @@ while getopts "f:n:i:h" option; do
     f  )
       load_env
       FILE=$OPTARG;;
-    n  ) MAPBOX_TILESET_NAME=$OPTARG;;
-    i  ) MAPBOX_TILESET_ID=$OPTARG;;
+    n  )
+      MAPBOX_TILESET_NAME=$OPTARG
+      echo "MAPBOX_TILESET_NAME=\"${MAPBOX_TILESET_NAME}\""
+      ;;
+    i  )
+      MAPBOX_TILESET_ID=$OPTARG
+      echo "MAPBOX_TILESET_ID=\"${MAPBOX_TILESET_ID}\""
+      ;;
     u  )
       exit 0
       ;;

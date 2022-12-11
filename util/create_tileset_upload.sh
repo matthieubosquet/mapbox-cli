@@ -2,10 +2,13 @@
 
 # Upload the file to S3 and create tileset
 function create_tileset_upload {
+  echo ""
   echo "File to upload: ${FILE}"
   aws s3 cp "${FILE}" "s3://${AWS_BUCKET}/${AWS_KEY}" \
     --region us-east-1 && \
+  echo "File upload complete" && \
   sleep 10 && \
+  echo "Slept a little, hitting mapbox" && \
   curl --request POST \
     -H "Content-Type: application/json" \
     -H "Cache-Control: no-cache" \

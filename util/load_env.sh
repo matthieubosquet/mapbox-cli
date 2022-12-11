@@ -17,14 +17,13 @@ function load_env {
   AWS_BUCKET=$(echo $AWS |  jq -r ".bucket")
   AWS_KEY=$(echo $AWS |  jq -r ".key")
 
-  echo "MAPBOX_USER=${MAPBOX_USER}"
-  echo "MAPBOX_ACCESS_TOKEN=${MAPBOX_ACCESS_TOKEN}"
-  echo "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}"
-  echo "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"
-  echo "AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}"
-  echo "AWS_BUCKET=${AWS_BUCKET}"
-  echo "AWS_KEY=${AWS_KEY}"
-  echo ""
+  echo "MAPBOX_USER=\"${MAPBOX_USER}\""
+  echo "MAPBOX_ACCESS_TOKEN=\"${MAPBOX_ACCESS_TOKEN}\""
+  echo "AWS_ACCESS_KEY_ID=\"${AWS_ACCESS_KEY_ID}\""
+  echo "AWS_SECRET_ACCESS_KEY=\"${AWS_SECRET_ACCESS_KEY}\""
+  echo "AWS_SESSION_TOKEN=\"${AWS_SESSION_TOKEN}\""
+  echo "AWS_BUCKET=\"${AWS_BUCKET}\""
+  echo "AWS_KEY=\"${AWS_KEY}\""
 }
 
 export -f load_env

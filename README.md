@@ -1,5 +1,10 @@
 # MapBox CLI tool
 
+## Requirements
+
+Install aws cli and curl.
+
+
 ## Usage
 
 ```sh
